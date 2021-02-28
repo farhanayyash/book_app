@@ -3,12 +3,22 @@ body{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  text-align: center;
+  background-color: rgba(201, 89, 89, 0.37);
 }
 .master{
-  width: 400px;
+  width: 350px;
   height: 500px;
   overflow: hidden;
   margin-right:20px ;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5%;
+
 
 }
 .card {
@@ -19,18 +29,17 @@ body{
   text-align: center;
   /* Add shadows to create the "card" effect */
   flex-wrap: wrap;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 140px 180px 0 rgba(0, 0, 0, 0.349);
   transition: 0.3s;
-  width: 400px;
+  width: 350px;
   height: 500px;
-  margin: 20px 50px;
   overflow:scroll;
   padding-right: 20px;
 }
 
 /* On mouse-over, add a deeper shadow */
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.master:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.493);
 }
 
 /* Add some padding inside the card container */
@@ -42,18 +51,19 @@ img{
 }
 .container2{
   background-color: brown;
-  position: relative;
-  margin-top: 200px;
-  left: 40%;
+  position: fixed;
   top: 50%;
-  width: 300px;
-  height: 300px;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
   
 }
 
 .child2 {
- position: absolute;
- left: 50%;
- top: 50%;
-   margin: -50px 0 0 -70px; /* apply negative top and left margins to truly center the element */
+position: absolute;
+background-color: brown;
+padding: 20px;
+text-align: center;
+border-radius: 5%; 
+margin: -100px 0 0 -100px; /* apply negative top and left margins to truly center the element */
 }
