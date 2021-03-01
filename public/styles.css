@@ -87,12 +87,19 @@ margin: -100px 0 0 -100px; /* apply negative top and left margins to truly cente
 .card h4{
   color: #676767;
   font-style: italic;
+  width: 80%;
   font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 .card p{
   color: #676767;
   font-size:20px;
+  width: 80%;
   font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
 }
 header{
   display: flex;
@@ -169,6 +176,8 @@ header .rightdiv{
   width: 100%;
   background-color: black;
   color: white;
+  transition: 0.5s;
+
 }
 .buttonForm input:hover{
   border: none;
@@ -241,4 +250,25 @@ header .rightdiv{
 }
 .margintop20{
   margin-top: 45px;
+}
+
+
+.buttonBook{
+  width: 100%;
+  margin-left: 10px;
+  height: 50px;
+  font-size: 3ex;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  border: none;
+  margin-top: 15%;
+  margin-bottom: 20px;
+  transition: 0.5s;
+}
+.buttonBook:hover{
+
+  background-color: #9B9B9B;
+  color: black;
+  border: none;
 }
