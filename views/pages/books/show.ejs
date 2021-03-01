@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="../styles.css">
-
 </head>
 
 <body>
-    
+
     <header>
         <h1>Best Books!</h1>
         <div class="rightdiv" style="width: 100%; ">
@@ -29,35 +28,26 @@
 
     
     </header>
-
     <div class="underheader">
-        <h1>Search Results</h1>
+        <h1>Saved Books</h1>
     </div>
     <div class="showhandler">
-    <% data.forEach(item =>{ %>
-    <div class="master">
-    <div class="card">
-        <img src="<%= item.image_url  %>" alt="">
-        <div class="container">
-        <h2><%= item.title %></h2>
-        <h4><%= item.author %></h4>
-        <h4><%= item.isbn %></h4>
-        <p><%= item.description %></p>
-        <form action="/addBook" method="POST">
-            <input type="hidden" name="image_url" value="<%= item.image_url %>">
-            <input type="hidden" name="title" value="<%= item.title %>">
-            <input type="hidden" name="author" id="title" value="<%= item.author %>">
-            <input type="hidden" name="isbn" id='author' value="<%= item.isbn %>">
-            <input type="hidden" name="description" id='author' value="<%= item.description %>">
-            <input type="submit" value="Select this Book" class="buttonBook">
-        </form>
+
+    <% booksArr.forEach(item =>{ %>
+        <div class="master">
+        <div class="card">
+        <img src="<%= item.image_url %>" alt="">
+        <h2 style="margin-bottom: 20px;"><%= item.title %></h2>
+
+        <a href="/getBook/<%= item.id %>" class="buttondetals">View Details</a>
     </div>
-    </div>
-    </div>
-    <% })%>
- 
 </div>
-<script src="../app.js"></script>
+    <% })%>
+
+</div>
+    <script src="../app.js"></script>
+
 </body>
 
 </html>
+
