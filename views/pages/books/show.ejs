@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Saved Books</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="shortcut icon" href="https://library.kissclipart.com/20180830/ccq/kissclipart-books-icon-png-clipart-computer-icons-book-fa5d85a91f8ea2cc.png">
     <link rel="stylesheet" href="../styles.css">
 </head>
 
@@ -35,7 +35,7 @@
 
     <% booksArr.forEach(item =>{ %>
         <div class="master">
-        <div class="card" style="position: relative; display: flex;   flex-direction: column;
+        <div class="card" style="position: relative; display: flex;   flex-direction: column; overflow: hidden;
         ">
         <img src="<%= item.image_url %>" alt="">
         <h2 style="margin-bottom: 20px;"><%= item.title %></h2>
