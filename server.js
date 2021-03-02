@@ -32,8 +32,8 @@ app.get('/', (req, res) => {
 app.post('/searches/show', (req, res) => {
     let searchData = req.body.searchBox;
     let authorOrTitle = req.body.titleAuthor;
-    console.log(req.body);
-    let url = `https://www.googleapis.com/books/v1/volumes?q=+in${authorOrTitle}:${searchData}`
+    console.log( req.body.titleAuthor);
+    let url = `https://www.googleapis.com/books/v1/volumes?q=${searchData}+in${authorOrTitle}`
     console.log(url);
     superagent.get(url)
         .then((results) => {
